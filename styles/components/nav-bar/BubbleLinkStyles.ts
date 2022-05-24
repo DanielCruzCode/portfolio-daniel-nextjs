@@ -35,12 +35,12 @@ export const bubbleLink = css`
     height: 63px;
     position: absolute;
     top: -0.5rem;
-    transition: background-color 400ms ease-in, box-shadow 400ms ease-in,
-      height 400ms ease-in, width 400ms ease-in, top 400ms ease-in;
+    transition: background-color 300ms ease-in, box-shadow 300ms ease-in,
+      height 300ms ease-in, width 300ms ease-in, top 300ms ease-in;
     width: 63px;
   }
   .bubble-background.active-bubble {
-    box-shadow: 0 -6px 14px -6px #00000040;
+    box-shadow: 0 -7px 18px -8px #00000040;
     background-color: white;
     top: -3rem;
   }

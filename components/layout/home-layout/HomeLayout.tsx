@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { globalStyles } from "styles/globals";
-import NavBar from "components/nav-bar/Navbar";
 
 interface HomeLayoutProps {
   children: ReactNode;
@@ -9,10 +8,7 @@ interface HomeLayoutProps {
 export default function HomeLayout({ children }: HomeLayoutProps) {
   return (
     <>
-      <main>
-        {children}
-        <NavBar />
-      </main>
+      <main>{children}</main>
       <style jsx>{globalStyles}</style>
     </>
   );
