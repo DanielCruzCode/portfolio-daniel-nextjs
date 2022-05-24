@@ -49,5 +49,6 @@ export const globalStyles = css.global`
   h5,
   h6 {
     overflow-wrap: break-word;
+    text-align: center;
   }
 `;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ComponentType, useState } from "react";
-import { bubbleLink } from "./BubbleLinkStyles";
+import { bubbleLink } from "styles/components/nav-bar/BubbleLinkStyles";
 
 interface NavLinkProps {
   IconComponent: ComponentType;

@@ -4,8 +4,8 @@ import {
   ProfileIcon,
   WorkingExpIcon,
 } from "components/icons/nav-bar-icons/NavBarIcons";
+import { navBar } from "styles/components/nav-bar/NavBarStyles";
 import { BubbleLink } from "./BubbleLink";
-import { navBar } from "./NavBarStyles";
 
 export default function NavBar() {
   return (

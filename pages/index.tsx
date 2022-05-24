@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import MainLayout from "../components/layout/main-layout/MainLayout";
+import HomeLayout from "../components/layout/home-layout/HomeLayout";
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
       </Head>
-      <MainLayout>
+      <HomeLayout>
         <h1>
           Hola este es mi portfolio, espero que puedas darle un vistazo y puedas
           darme feedback al respecto
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <Link href="/profile">
           <a>Ir al perfil</a>
         </Link>
-      </MainLayout>
+      </HomeLayout>
       <footer></footer>
     </div>
   );
