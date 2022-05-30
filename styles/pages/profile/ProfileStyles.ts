@@ -7,12 +7,6 @@ export const profileGeneralStyles = css`
     margin-bottom: 45px;
     margin-top: 32px;
   }
-
-  p {
-    max-width: 20.25rem;
-    text-align: start;
-    margin-inline: auto;
-  }
 `;
 
 export const socialNetworks = css`

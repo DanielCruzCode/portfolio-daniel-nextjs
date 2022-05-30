@@ -11,7 +11,12 @@ export const button = css`
 export const blobs = css.global`
   .blob-bubble-left,
   .blob-bubble-right {
-    position: absolute;
+    position: fixed;
+  }
+
+  .blob-bubble-left {
+    left: -5rem;
+    top: -2rem;
   }
 
   .blob-bubble-right {

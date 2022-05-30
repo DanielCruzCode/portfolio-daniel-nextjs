@@ -1,4 +1,5 @@
 import css from "styled-jsx/css";
+import { boxShadow } from "styles/theme";
 
 export const navBar = css`
   .navContainer {
@@ -11,7 +12,7 @@ export const navBar = css`
   nav {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: ${boxShadow.normal};
     margin-inline: auto;
     padding: 0.75rem 0.75rem 0.5rem;
     width: clamp(18.75rem, 20.4375rem, 31.25rem);

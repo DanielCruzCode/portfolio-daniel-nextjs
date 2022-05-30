@@ -1,22 +1,24 @@
 import { Avatar } from "components/commons/Avatar";
 import { SocialNetworkLink } from "components/commons/SocialNetworkLink";
+import MainLayout from "components/layout/main-layout/MainLayout";
 import {
   GitHubIcon,
   LinkedinIcon,
   TwitterIcon,
 } from "components/icons/social-networks/SocialNetworksIcons";
-import MainLayout from "components/layout/main-layout/MainLayout";
-import { ProfileMessage } from "messages/en/ProfileMessage";
 import {
   profileGeneralStyles,
   socialNetworks,
 } from "styles/pages/profile/ProfileStyles";
+import { FormattedMessage } from "react-intl";
 
 export default function Profile() {
   return (
     <>
       <MainLayout>
-        <h1>Profile</h1>
+        <h1>
+          <FormattedMessage id="profile-page.title" />
+        </h1>
         <div className="avatar">
           <Avatar />
         </div>
@@ -34,7 +36,16 @@ export default function Profile() {
             Icon={TwitterIcon}
           />
         </div>
-        <p>{ProfileMessage.principalMessage}</p>
+        <p className="content-text">
+          <FormattedMessage
+            id="profile-page.principal-message"
+            defaultMessage="Content"
+            values={{
+              strong: (chunks) => <strong>{chunks}</strong>,
+            }}
+          />
+          {/* TODO: Make a FormattedMessageFromHTML to use it like HTML converter */}
+        </p>
       </MainLayout>
       <style jsx>{profileGeneralStyles}</style>
       <style jsx>{socialNetworks}</style>
