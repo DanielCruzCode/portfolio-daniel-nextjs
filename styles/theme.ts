@@ -25,6 +25,7 @@ export const zIndexLayers = {
 };
 
 export const boxShadow = {
+  soft: "0 4px 5px rgba(0, 0, 0, 0.10)",
   normal: "0px 5px 12px rgba(0, 0, 0, 0.25)",
   buttons: "0px 3px 12px rgba(0, 0, 0, 0.10)",
 };

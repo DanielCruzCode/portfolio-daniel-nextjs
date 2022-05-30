@@ -18,6 +18,8 @@ export const globalStyles = css.global`
     margin: 0;
     font-family: ${fontProperties.primaryFont};
     accent-color: ${colors.primary};
+    outline-color: ${colors.primary};
+    outline-width: 5px;
   }
 
   *::before,

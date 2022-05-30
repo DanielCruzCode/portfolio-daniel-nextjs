@@ -11,6 +11,19 @@ export interface ProjectCardProps {
   urlToDemo: string;
 }
 
+export enum LanguagesEnum {
+  /* eslint no-unused-vars: "off" */
+  /* This enum actually is used, eslint haven't detect them uses */
+  spanish = "es",
+  english = "en",
+}
+
+export type Languages = "es" | "en";
+
+export interface LanguageContext {
+  handleSwitchLanguage: (language: any) => void;
+}
+
 // Formatjs
 export type MessageDescriptor = {
   id?: string;

@@ -6,10 +6,8 @@ import {
   container,
 } from "styles/components/layout/main-layout/MainLayoutStyles";
 import NavBar from "components/nav-bar/Navbar";
-import {
-  BlobLeft,
-  BlobRight,
-} from "components/icons/nav-bar-icons/main-layout/blobs";
+import { BlobLeft, BlobRight } from "components/icons/main-layout/blobs";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -19,11 +17,12 @@ export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <>
       <div className="blob-bubble-left">
-        <BlobLeft />
+        <BlobLeft className="float" />
       </div>
       <div className="blob-bubble-right">
-        <BlobRight />
+        <BlobRight className="float" />
       </div>
+      <LanguageSwitcher />
       <main>
         {children}
         <NavBar />
