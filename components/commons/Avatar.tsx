@@ -5,7 +5,7 @@ export const Avatar = () => {
     <>
       <Image
         className="avatar-img"
-        src="/imgs/avatar.jpg"
+        src="/assets/imgs/avatar.jpg"
         alt="Daniel Cruz photo"
         width={174}
         height={174}

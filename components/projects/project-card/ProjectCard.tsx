@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ProjectListStylesCard } from "styles/components/projects-list/ProjectsListStyles";
+import { ProjectListStylesCard } from "styles/components/projects/projects-list/ProjectsListStyles";
 import { LinkButton } from "components/commons/LinkButton";
 import { ProjectCardProps } from "types";
 import { useId } from "react";
@@ -43,7 +43,7 @@ export const ProjectCard = ({
             {/* TODO: Translate this message */}
           </div>
           {techsIcons.length === MAXIMUM_OF_TECHS_ICONS && <p>...and more</p>}
-          {/* TODO: This have errors */}
+          {/* TODO: This "...and more" have errors */}
         </div>
         <div className="project-card__footer">
           <LinkButton relevance="primary" href={urlToCode}>

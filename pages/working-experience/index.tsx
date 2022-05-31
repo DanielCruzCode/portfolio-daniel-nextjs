@@ -1,5 +1,5 @@
 import MainLayout from "components/layout/main-layout/MainLayout";
-import { ProjectsGrid } from "components/projects-list/ProjectsGrid";
+import { ProjectsGrid } from "components/projects/projects-list/ProjectsGrid";
 
 export default function WorkingExperience() {
   return (

@@ -10,14 +10,14 @@ import {
   profileGeneralStyles,
   socialNetworks,
 } from "styles/pages/profile/ProfileStyles";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessageToHTML } from "components/formatted-message/FormattedMessageToHTML";
 
 export default function Profile() {
   return (
     <>
       <MainLayout>
         <h1>
-          <FormattedMessage id="profile-page.title" />
+          <FormattedMessageToHTML id="profile-page.title" />
         </h1>
         <div className="avatar">
           <Avatar />
@@ -36,16 +36,18 @@ export default function Profile() {
             Icon={TwitterIcon}
           />
         </div>
-        <p className="content-text">
-          <FormattedMessage
+        <div className="text-container">
+          <FormattedMessageToHTML
             id="profile-page.principal-message"
-            defaultMessage="Content"
-            values={{
-              strong: (chunks) => <strong>{chunks}</strong>,
+            additionalValues={{
+              a: (chunks: any) => (
+                <a href="https://rockcontent.com/es/blog/que-es-engagement/">
+                  {chunks}
+                </a>
+              ),
             }}
           />
-          {/* TODO: Make a FormattedMessageFromHTML to use it like HTML converter */}
-        </p>
+        </div>
       </MainLayout>
       <style jsx>{profileGeneralStyles}</style>
       <style jsx>{socialNetworks}</style>

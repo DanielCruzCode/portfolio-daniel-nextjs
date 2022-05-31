@@ -20,10 +20,6 @@ export enum LanguagesEnum {
 
 export type Languages = "es" | "en";
 
-export interface LanguageContext {
-  handleSwitchLanguage: (language: any) => void;
-}
-
 // Formatjs
 export type MessageDescriptor = {
   id?: string;

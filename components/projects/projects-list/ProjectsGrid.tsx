@@ -1,6 +1,6 @@
-import { ProjectListStylesGrid } from "styles/components/projects-list/ProjectsListStyles";
+import { ProjectListStylesGrid } from "styles/components/projects/projects-list/ProjectsListStyles";
 import { ProjectCardProps } from "types";
-import { ProjectCard } from "./project-card/ProjectCard";
+import { ProjectCard } from "components/projects/project-card/ProjectCard";
 import { useId } from "react";
 
 export const ProjectsGrid = () => {
@@ -8,43 +8,43 @@ export const ProjectsGrid = () => {
 
   const projects: ProjectCardProps[] = [
     {
-      imgSrc: "/imgs/projects/react.png",
+      imgSrc: "/assets/imgs/projects/react.png",
       cardText: "React.js Notes app",
       techsIcons: [
         {
-          src: "/imgs/technologies/node.png",
+          src: "/assets/imgs/technologies/node.png",
           alt: "Node.js icon",
         },
         {
-          src: "/imgs/technologies/node.png",
+          src: "/assets/imgs/technologies/node.png",
           alt: "Node.js icon",
         },
         {
-          src: "/imgs/technologies/node.png",
+          src: "/assets/imgs/technologies/node.png",
           alt: "Node.js icon",
         },
         {
-          src: "/imgs/technologies/node.png",
+          src: "/assets/imgs/technologies/node.png",
           alt: "Node.js icon",
         },
         {
-          src: "/imgs/technologies/node.png",
+          src: "/assets/imgs/technologies/node.png",
           alt: "Node.js icon",
         },
         {
-          src: "/imgs/technologies/node.png",
+          src: "/assets/imgs/technologies/node.png",
           alt: "Node.js icon",
         },
         {
-          src: "/imgs/technologies/node.png",
+          src: "/assets/imgs/technologies/node.png",
           alt: "Node.js icon",
         },
         {
-          src: "/imgs/technologies/node.png",
+          src: "/assets/imgs/technologies/node.png",
           alt: "Node.js icon",
         },
         {
-          src: "/imgs/technologies/node.png",
+          src: "/assets/imgs/technologies/node.png",
           alt: "Node.js icon",
         },
       ],
@@ -52,11 +52,11 @@ export const ProjectsGrid = () => {
       urlToDemo: "/#",
     },
     {
-      imgSrc: "/imgs/projects/express-node.png",
+      imgSrc: "/assets/imgs/projects/express-node.png",
       cardText: "Express API",
       techsIcons: [
         {
-          src: "/imgs/technologies/node.png",
+          src: "/assets/imgs/technologies/node.png",
           alt: "Node.js icon",
         },
       ],

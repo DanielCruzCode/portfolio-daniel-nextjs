@@ -2,6 +2,7 @@ import { boxShadow, colors, fontProperties } from "styles/theme";
 import css from "styled-jsx/css";
 
 export const globalStyles = css.global`
+  // #region CSS Resets
   html,
   body {
     height: 100%;
@@ -66,6 +67,12 @@ export const globalStyles = css.global`
     color: ${colors.textsBaseColor};
   }
 
+  a:any-link {
+    color: ${colors.textsHighlightColor};
+  }
+
+  // #endregion CSS Resets
+
   // #region utility classes
   .br-10 {
     border-radius: 10px;
@@ -99,6 +106,7 @@ export const globalStyles = css.global`
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+  .text-container,
   .content-subtitle,
   .content-text {
     max-width: 20.25rem;
@@ -145,9 +153,26 @@ export const globalStyles = css.global`
   }
   // #endregion animations
 
+  // #region Media Queries
   @media (min-width: 1024px) {
+    .text-container,
     .content-text {
-      max-width: 40%;
+      max-width: 75ch;
+    }
+
+    details > .sum-tooltip-container {
+      position: absolute;
+      top: 2rem;
+    }
+
+    details[open] > .sum-tooltip-container > .sum-tooltip {
+      padding: 0.5rem 1rem;
+      width: max-content;
+    }
+
+    .sum-tooltip-close-btn {
+      display: none;
     }
   }
+  // #endregion Media Queries
 `;

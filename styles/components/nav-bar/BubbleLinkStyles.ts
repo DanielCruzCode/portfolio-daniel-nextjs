@@ -45,6 +45,7 @@ export const bubbleLink = css`
     top: -3rem;
   }
   .nav-bubble__text {
+    color: ${colors.textsBaseColor};
     font-size: 16px;
     opacity: 0;
     transition: opacity 450ms ease-in;

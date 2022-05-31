@@ -1,14 +1,17 @@
-import { useLangContext } from "hooks/useLangContext";
 import { ChangeEvent } from "react";
-import { boxShadow, fontProperties, zIndexLayers } from "styles/theme";
+import { useRouter } from "next/router";
+import { LanguageSwitcherStyles } from "styles/components/layout/main-layout/LanguageSwitcherStyles";
 import { LanguagesEnum } from "types";
 
 export const LanguageSwitcher = () => {
-  const { handleSwitchLanguage } = useLangContext();
+  const router = useRouter();
 
   const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const lang: string = event.target.value;
-    handleSwitchLanguage(lang);
+
+    router.push(router.asPath, router.asPath, {
+      locale: lang,
+    });
   };
 
   return (
@@ -19,36 +22,13 @@ export const LanguageSwitcher = () => {
           id="language-switcher"
           className="language-switcher"
           onChange={handleLanguageChange}
+          value={router.locale}
         >
-          <option value={LanguagesEnum.english}>EN</option>
-          <option value={LanguagesEnum.spanish}>ES</option>
+          <option value={LanguagesEnum.english}>{LanguagesEnum.english}</option>
+          <option value={LanguagesEnum.spanish}>{LanguagesEnum.english}</option>
         </select>
       </div>
-      <style jsx>{`
-        .lang-container {
-          position: fixed;
-          top: 0.5rem;
-          right: 0.5rem;
-          background-color: white;
-          z-index: ${zIndexLayers.layer2};
-          box-shadow: ${boxShadow.soft};
-          border-radius: 17px;
-          overflow: hidden;
-          padding: 0.25rem 0.3125rem 0.1875rem;
-        }
-
-        .language-switcher {
-          border: none;
-          background-color: white;
-          outline-offset: 0.3rem;
-          font-size: ${fontProperties.base};
-          font-weight: bold;
-          border-radius: 1.0625rem;
-        }
-
-        .language-switcher:focus {
-        }
-      `}</style>
+      <style jsx>{LanguageSwitcherStyles}</style>
     </>
   );
 };
