@@ -38,7 +38,7 @@
   dependencies:
     "regenerator-runtime" "^0.13.4"
 
-"@commitlint/cli@^17.0.0":
+"@commitlint/cli@17.0.0":
   "integrity" "sha512-Np6slCdVVG1XwMvwbZrXIzS1INPAD5QmN4L6al04AmCd4nAPU63gxgxC5Mz0Fmx7va23Uvb0S7yEFV1JPhvPUQ=="
   "resolved" "https://registry.npmjs.org/@commitlint/cli/-/cli-17.0.0.tgz"
   "version" "17.0.0"
@@ -53,7 +53,7 @@
     "resolve-global" "1.0.0"
     "yargs" "^17.0.0"
 
-"@commitlint/config-conventional@^17.0.0":
+"@commitlint/config-conventional@17.0.0":
   "integrity" "sha512-jttJXBIq3AuQCvUVwxSctCwKfHxxbALE0IB9OIHYCu/eQdOzPxN72pugeZsWDo1VK/T9iFx+MZoPb6Rb1/ylsw=="
   "resolved" "https://registry.npmjs.org/@commitlint/config-conventional/-/config-conventional-17.0.0.tgz"
   "version" "17.0.0"
@@ -269,10 +269,10 @@
   dependencies:
     "tslib" "2.4.0"
 
-"@formatjs/intl@2.2.4":
-  "integrity" "sha512-cQpEdxP4WtQsb8kc8h2+21fnkb7tcQMBAMpnUzK8lFUNOXQtu65pUVe0f7Nh7uvJoVbtMiigTGoj+J4dZjUOuQ=="
-  "resolved" "https://registry.npmjs.org/@formatjs/intl/-/intl-2.2.4.tgz"
-  "version" "2.2.4"
+"@formatjs/intl@2.2.5":
+  "integrity" "sha512-b0+5Bjsl3KDAII2frBPRO7ck9Ec/xqZ25BoiJATJhe//e4n6FOvVXk5QKYwBQPDt3JPu/Qa14oqHDiZlZmVdSg=="
+  "resolved" "https://registry.npmjs.org/@formatjs/intl/-/intl-2.2.5.tgz"
+  "version" "2.2.5"
   dependencies:
     "@formatjs/ecma402-abstract" "1.11.6"
     "@formatjs/fast-memoize" "1.2.3"
@@ -984,10 +984,10 @@
   "resolved" "https://registry.npmjs.org/csstype/-/csstype-3.1.0.tgz"
   "version" "3.1.0"
 
-"cz-conventional-changelog@^3.3.0":
-  "integrity" "sha512-U466fIzU5U22eES5lTNiNbZ+d8dfcHcssH4o7QsdWaCcRs/feIPCxKYSWkYBNs5mny7MvEfwpTLWjvbm94hecw=="
-  "resolved" "https://registry.npmjs.org/cz-conventional-changelog/-/cz-conventional-changelog-3.3.0.tgz"
-  "version" "3.3.0"
+"cz-conventional-changelog@3.2.0":
+  "integrity" "sha512-yAYxeGpVi27hqIilG1nh4A9Bnx4J3Ov+eXy4koL3drrR+IO9GaWPsKjik20ht608Asqi8TQPf0mczhEeyAtMzg=="
+  "resolved" "https://registry.npmjs.org/cz-conventional-changelog/-/cz-conventional-changelog-3.2.0.tgz"
+  "version" "3.2.0"
   dependencies:
     "chalk" "^2.4.1"
     "commitizen" "^4.0.3"
@@ -998,10 +998,10 @@
   optionalDependencies:
     "@commitlint/load" ">6.1.1"
 
-"cz-conventional-changelog@3.2.0":
-  "integrity" "sha512-yAYxeGpVi27hqIilG1nh4A9Bnx4J3Ov+eXy4koL3drrR+IO9GaWPsKjik20ht608Asqi8TQPf0mczhEeyAtMzg=="
-  "resolved" "https://registry.npmjs.org/cz-conventional-changelog/-/cz-conventional-changelog-3.2.0.tgz"
-  "version" "3.2.0"
+"cz-conventional-changelog@3.3.0":
+  "integrity" "sha512-U466fIzU5U22eES5lTNiNbZ+d8dfcHcssH4o7QsdWaCcRs/feIPCxKYSWkYBNs5mny7MvEfwpTLWjvbm94hecw=="
+  "resolved" "https://registry.npmjs.org/cz-conventional-changelog/-/cz-conventional-changelog-3.3.0.tgz"
+  "version" "3.3.0"
   dependencies:
     "chalk" "^2.4.1"
     "commitizen" "^4.0.3"
@@ -2469,7 +2469,7 @@
   "resolved" "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.7.tgz"
   "version" "0.0.7"
 
-"nanoid@^3.1.30":
+"nanoid@^3.1.30", "nanoid@^3.3.4":
   "integrity" "sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw=="
   "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-3.3.4.tgz"
   "version" "3.3.4"
@@ -2814,14 +2814,14 @@
     "loose-envify" "^1.1.0"
     "scheduler" "^0.22.0"
 
-"react-intl@^6.0.2":
-  "integrity" "sha512-SrVlPUYITOQA9s+yhePh2MtLwbJh1MRhO69PK+eOPX8N+0kF78h0kaiJaIF3ZEJCawAxrL5927qI22VCap0INw=="
-  "resolved" "https://registry.npmjs.org/react-intl/-/react-intl-6.0.2.tgz"
-  "version" "6.0.2"
+"react-intl@6.0.3":
+  "integrity" "sha512-c6wHOnYjOBTbqIt+6TVV2QwdKrqYiFP713tMsw/sJWYgzfaRTjsvGkcxOXhX3SoBrqbUhKTEzjdniuwpAN/qKA=="
+  "resolved" "https://registry.npmjs.org/react-intl/-/react-intl-6.0.3.tgz"
+  "version" "6.0.3"
   dependencies:
     "@formatjs/ecma402-abstract" "1.11.6"
     "@formatjs/icu-messageformat-parser" "2.1.2"
-    "@formatjs/intl" "2.2.4"
+    "@formatjs/intl" "2.2.5"
     "@formatjs/intl-displaynames" "6.0.1"
     "@formatjs/intl-listformat" "7.0.1"
     "@types/hoist-non-react-statics" "^3.3.1"

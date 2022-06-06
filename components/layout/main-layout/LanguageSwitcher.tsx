@@ -25,7 +25,7 @@ export const LanguageSwitcher = () => {
           value={router.locale}
         >
           <option value={LanguagesEnum.english}>{LanguagesEnum.english}</option>
-          <option value={LanguagesEnum.spanish}>{LanguagesEnum.english}</option>
+          <option value={LanguagesEnum.spanish}>{LanguagesEnum.spanish}</option>
         </select>
       </div>
       <style jsx>{LanguageSwitcherStyles}</style>

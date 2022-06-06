@@ -10,6 +10,12 @@ export interface ProjectCardProps {
   urlToCode: string;
   urlToDemo: string;
 }
+export interface KnownTech {
+  id: string;
+  name: string;
+  messageId: string;
+  image: string;
+}
 
 export enum LanguagesEnum {
   /* eslint no-unused-vars: "off" */

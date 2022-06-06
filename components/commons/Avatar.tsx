@@ -9,6 +9,7 @@ export const Avatar = () => {
         alt="Daniel Cruz photo"
         width={174}
         height={174}
+        quality={100}
       />
       <style jsx>{`
         :global(.avatar-img) {

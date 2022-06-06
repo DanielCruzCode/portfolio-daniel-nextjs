@@ -1,10 +1,9 @@
 import Image from "next/image";
+import { FormattedMessage } from "react-intl";
 import { ProjectListStylesCard } from "styles/components/projects/projects-list/ProjectsListStyles";
 import { LinkButton } from "components/commons/LinkButton";
 import { ProjectCardProps } from "types";
-import { useId } from "react";
-
-const MAXIMUM_OF_TECHS_ICONS = 4;
+import { nanoid } from "nanoid";
 
 export const ProjectCard = ({
   imgSrc,
@@ -13,8 +12,6 @@ export const ProjectCard = ({
   urlToCode,
   urlToDemo,
 }: ProjectCardProps) => {
-  const id = useId();
-
   return (
     <>
       <div className="projects-card">
@@ -26,6 +23,7 @@ export const ProjectCard = ({
             width={190}
             height={130}
             objectFit="cover"
+            quality={100}
           />
         </div>
         <div className="project-card__content">
@@ -37,20 +35,18 @@ export const ProjectCard = ({
                 alt={alt}
                 width={32}
                 height={32}
-                key={id + "-tech-icon"}
+                quality={100}
+                key={nanoid() + "-tech-icon"}
               />
             ))}
-            {/* TODO: Translate this message */}
           </div>
-          {techsIcons.length === MAXIMUM_OF_TECHS_ICONS && <p>...and more</p>}
-          {/* TODO: This "...and more" have errors */}
         </div>
         <div className="project-card__footer">
           <LinkButton relevance="primary" href={urlToCode}>
-            View code
+            <FormattedMessage id="projects.view-code" />
           </LinkButton>
           <LinkButton relevance="secondary" href={urlToDemo}>
-            Demo
+            <FormattedMessage id="projects.demo" />
           </LinkButton>
         </div>
       </div>

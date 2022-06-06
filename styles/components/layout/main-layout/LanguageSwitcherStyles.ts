@@ -23,4 +23,11 @@ export const LanguageSwitcherStyles = css`
     border-radius: 1.0625rem;
     text-transform: uppercase;
   }
+
+  @media (min-width: 1024px) {
+    .lang-container {
+      top: 5vh;
+      right: 18vw;
+    }
+  }
 `;

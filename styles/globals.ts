@@ -5,6 +5,7 @@ export const globalStyles = css.global`
   // #region CSS Resets
   html,
   body {
+    scroll-behavior: smooth;
     height: 100%;
     color: ${colors.textsBaseColor};
   }
@@ -65,10 +66,19 @@ export const globalStyles = css.global`
     line-height: 26px;
     letter-spacing: 0.02em;
     color: ${colors.textsBaseColor};
+    text-align: start;
   }
 
   a:any-link {
     color: ${colors.textsHighlightColor};
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #dcdcdc;
+    margin-inline: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   // #endregion CSS Resets
@@ -96,19 +106,10 @@ export const globalStyles = css.global`
     color: ${colors.textsBaseColor};
     margin-bottom: 1rem;
     margin-top: 1rem;
+    text-align: start;
   }
 
-  hr {
-    border: none;
-    border-top: 1px solid #dcdcdc;
-    max-width: 20.25rem;
-    margin-inline: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  .text-container,
-  .content-subtitle,
-  .content-text {
+  .text-container {
     max-width: 20.25rem;
     text-align: start;
     margin-inline: auto;
@@ -124,13 +125,13 @@ export const globalStyles = css.global`
 
   @keyframes ani-float {
     0% {
-      transform: translate(0, 0px);
+      transform: translate(0, 0);
     }
     50% {
       transform: translate(0, 15px);
     }
     100% {
-      transform: translate(0, -0px);
+      transform: translate(0, 0);
     }
   }
   .float-2 {
@@ -142,21 +143,56 @@ export const globalStyles = css.global`
 
   @keyframes ani-float-2 {
     0% {
-      transform: translate(0, 0px);
+      transform: translate(0, 0);
     }
     50% {
       transform: translate(0, 5px);
     }
     100% {
-      transform: translate(0, 0px);
+      transform: translate(0, 0);
+    }
+  }
+  .float-3 {
+    animation-name: ani-float-3;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.44, 0.41, 0.03, 0.46);
+  }
+
+  @keyframes ani-float-3 {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, -8px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  .link-highlight {
+    animation-name: ani-link-highlight;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in;
+    scroll-margin-top: 5em;
+  }
+  @keyframes ani-link-highlight {
+    0% {
+      background-color: transparent;
+    }
+    50% {
+      background-color: ${colors.softPrimary};
+    }
+    100% {
+      background-color: transparent;
     }
   }
   // #endregion animations
 
   // #region Media Queries
   @media (min-width: 1024px) {
-    .text-container,
-    .content-text {
+    .text-container {
       max-width: 75ch;
     }
 

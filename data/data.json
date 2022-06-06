@@ -1,0 +1,94 @@
+{
+  "projects": [
+    {
+      "imgSrc": "/assets/imgs/projects/react.png",
+      "cardText": "React.js Notes app",
+      "techsIcons": [
+        {
+          "src": "/assets/imgs/technologies/react.png",
+          "alt": "React.js icon"
+        },
+        {
+          "src": "/assets/imgs/technologies/javascript.png",
+          "alt": "javascript icon"
+        }
+      ],
+      "urlToCode": "/#",
+      "urlToDemo": "/#"
+    },
+    {
+      "imgSrc": "/assets/imgs/projects/express-node.png",
+      "cardText": "Express API",
+      "techsIcons": [
+        {
+          "src": "/assets/imgs/technologies/node.png",
+          "alt": "Node.js icon"
+        }
+      ],
+      "urlToCode": "/#",
+      "urlToDemo": "/#"
+    }
+  ],
+  "knownTechs": [
+    {
+      "id": "#react-js",
+      "name": "React.js",
+      "messageId": "knowledge-page.react",
+      "image": "/assets/imgs/technologies/react.png"
+    },
+    {
+      "id": "#javascript",
+      "name": "Javascript",
+      "messageId": "knowledge-page.javascript",
+      "image": "/assets/imgs/technologies/javascript.png"
+    },
+    {
+      "id": "#typescript",
+      "name": "Typescript",
+      "messageId": "knowledge-page.typescript",
+      "image": "/assets/imgs/technologies/typescript.png"
+    },
+    {
+      "id": "#node-js",
+      "name": "Node.js",
+      "messageId": "knowledge-page.node",
+      "image": "/assets/imgs/technologies/node.png"
+    },
+    {
+      "id": "#html",
+      "name": "HTML",
+      "messageId": "knowledge-page.html",
+      "image": "/assets/imgs/technologies/html.png"
+    },
+    {
+      "id": "#figma",
+      "name": "Figma",
+      "messageId": "knowledge-page.figma",
+      "image": "/assets/imgs/technologies/figma.png"
+    },
+    {
+      "id": "#css",
+      "name": "CSS",
+      "messageId": "knowledge-page.css",
+      "image": "/assets/imgs/technologies/css.png"
+    },
+    {
+      "id": "#git",
+      "name": "Git",
+      "messageId": "knowledge-page.git",
+      "image": "/assets/imgs/technologies/git.png"
+    },
+    {
+      "id": "#jira",
+      "name": "Jira",
+      "messageId": "knowledge-page.jira",
+      "image": "/assets/imgs/technologies/jira.png"
+    },
+    {
+      "id": "#postman",
+      "name": "Postman",
+      "messageId": "knowledge-page.postman",
+      "image": "/assets/imgs/technologies/postman.png"
+    }
+  ]
+}

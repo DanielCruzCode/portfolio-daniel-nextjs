@@ -9,6 +9,16 @@ export const ProjectListStylesGrid = css`
     margin-top: 7rem;
     row-gap: 6rem;
   }
+
+  @media (min-width: 1024px) {
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+      margin-top: 7rem;
+      row-gap: 6rem;
+    }
+  }
 `;
 export const ProjectListStylesCard = css`
   p {
