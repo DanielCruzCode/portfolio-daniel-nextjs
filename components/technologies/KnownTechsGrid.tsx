@@ -4,12 +4,13 @@ import { nanoid } from "nanoid";
 
 import { KnownTech } from "types";
 import { generalStyles } from "styles/components/technologies/KnownTechGrid";
+import { memo } from "react";
 
 interface Props {
   techsData: Array<KnownTech>;
 }
 
-export const KnownTechsGrid = ({ techsData }: Props) => {
+function KnownTechsGrid({ techsData }: Props) {
   return (
     <>
       <div className="grid">
@@ -34,4 +35,6 @@ export const KnownTechsGrid = ({ techsData }: Props) => {
       <style jsx>{generalStyles}</style>
     </>
   );
-};
+}
+
+export default memo(KnownTechsGrid);

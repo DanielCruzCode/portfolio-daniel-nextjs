@@ -6,7 +6,7 @@ import { useCurrentHash } from "../../hooks/useCurrentHash";
 
 import { KnownTech } from "types";
 import data from "data/data.json";
-import { KnownTechsGrid } from "components/technologies/KnownTechsGrid";
+import KnownTechsGrid from "components/technologies/KnownTechsGrid";
 
 export default function Knowledge() {
   const { currentHash } = useCurrentHash();
