@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { ComponentType, useState } from "react";
+import { ComponentType, memo, useState } from "react";
 import { bubbleLink } from "styles/components/nav-bar/BubbleLinkStyles";
 
 interface NavLinkProps {
@@ -9,12 +9,10 @@ interface NavLinkProps {
   href: string;
 }
 
-export const BubbleLink = ({
-  IconComponent,
-  text,
-  href = "",
-}: NavLinkProps) => {
+const BubbleLink = ({ IconComponent, text, href = "" }: NavLinkProps) => {
   const { pathname } = useRouter();
+
+  console.log("Re-render");
 
   const [activeClass, setActiveClass] = useState("");
   setTimeout(() => {
@@ -36,3 +34,5 @@ export const BubbleLink = ({
     </>
   );
 };
+
+export default memo(BubbleLink);

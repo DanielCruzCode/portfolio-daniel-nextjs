@@ -11,6 +11,8 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { capitalizePathname } from "helpers/StringHelpers";
+import { animations } from "styles/animations";
+import { utilityClasses } from "styles/utilityClasses";
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -37,6 +39,8 @@ export default function MainLayout({ children }: MainLayoutProps) {
         <NavBar />
       </main>
       <style jsx>{globalStyles}</style>
+      <style jsx>{animations}</style>
+      <style jsx>{utilityClasses}</style>
       <style jsx>{container}</style>
       <style jsx>{button}</style>
       <style jsx>{blobs}</style>

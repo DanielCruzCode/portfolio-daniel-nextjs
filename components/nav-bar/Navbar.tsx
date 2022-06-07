@@ -4,10 +4,11 @@ import {
   ProfileIcon,
   WorkingExpIcon,
 } from "components/icons/nav-bar-icons/NavBarIcons";
+import { memo } from "react";
 import { navBar } from "styles/components/nav-bar/NavBarStyles";
-import { BubbleLink } from "./BubbleLink";
+import BubbleLink from "./BubbleLink";
 
-export default function NavBar() {
+function NavBar() {
   return (
     <>
       <div className="navContainer">
@@ -24,14 +25,14 @@ export default function NavBar() {
               <BubbleLink
                 href="/working-experience"
                 IconComponent={KnowledgeIcon}
-                text="Working experience"
+                text="Experiencia laboral"
               />
             </li>
             <li>
               <BubbleLink
                 href="/knowledge"
                 IconComponent={WorkingExpIcon}
-                text="Knowledge"
+                text={"Conocimientos"}
               />
             </li>
             <li>
@@ -48,3 +49,5 @@ export default function NavBar() {
     </>
   );
 }
+
+export default memo(NavBar);

@@ -1,27 +1,13 @@
 import { ReactNode, useEffect, useState } from "react";
-import { IntlProvider } from "react-intl";
-
-import { LanguagesEnum } from "types";
+import { useRouter } from "next/router";
+import { createIntl, createIntlCache, IntlProvider } from "react-intl";
 
 import { langContext } from "context/LangContext";
-import englishMessages from "langs/en.json";
-import spanishMessages from "langs/es.json";
-import { useRouter } from "next/router";
-
-const MESSAGES_CONFIGURATION_INITIAL_STATE = {
-  lang: englishMessages,
-  locale: LanguagesEnum.english,
-};
-
-const MESSAGES_CONFIGURATION: any = {
-  en: { lang: englishMessages, locale: LanguagesEnum.english },
-  es: { lang: spanishMessages, locale: LanguagesEnum.spanish },
-};
-
-const MESSAGES_CONFIGURATION_DEFAULT = {
-  lang: englishMessages,
-  locale: LanguagesEnum.english,
-};
+import {
+  MESSAGES_CONFIG,
+  MESSAGES_CONFIG_DEFAULT,
+  MESSAGES_CONFIG_INITIAL_STATE,
+} from "./LangConsts";
 
 interface Props {
   children: ReactNode;
@@ -32,20 +18,23 @@ interface Props {
  */
 export const LangProvider = ({ children }: Props) => {
   const router = useRouter();
-  const locale: string =
-    router.locale || MESSAGES_CONFIGURATION_INITIAL_STATE.locale;
-  const [messages, setMessages] = useState(
-    MESSAGES_CONFIGURATION_INITIAL_STATE
+  const locale: string = router.locale || MESSAGES_CONFIG_INITIAL_STATE.locale;
+  const [messages, setMessages] = useState(MESSAGES_CONFIG_INITIAL_STATE);
+  const cache = createIntlCache();
+  const intl = createIntl(
+    {
+      locale,
+      messages: messages.lang,
+    },
+    cache
   );
 
   useEffect(() => {
-    setMessages(
-      MESSAGES_CONFIGURATION[locale] || MESSAGES_CONFIGURATION_DEFAULT
-    );
+    setMessages(MESSAGES_CONFIG[locale] || MESSAGES_CONFIG_DEFAULT);
   }, [locale]);
 
   return (
-    <langContext.Provider value={{}}>
+    <langContext.Provider value={{ intl }}>
       <IntlProvider messages={messages.lang} locale={messages.locale}>
         {children}
       </IntlProvider>
