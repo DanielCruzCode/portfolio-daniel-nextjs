@@ -76,5 +76,23 @@ export const animations = css.global`
       background-color: transparent;
     }
   }
+
+  .fade-in {
+    animation-name: ani-fade-in;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  @keyframes ani-fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   // #endregion animations
 `;

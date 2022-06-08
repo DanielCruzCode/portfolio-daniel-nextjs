@@ -22,6 +22,18 @@ export const blobs = css.global`
   .blob-bubble-right {
     right: 0;
   }
+
+  @media (min-width: 1040px) {
+    .blob-bubble-left {
+      left: -6rem;
+      transform: rotateZ(0deg);
+    }
+    .blob-bubble-right {
+      transform: rotateZ(166deg);
+      right: -4rem;
+      top: -1rem;
+    }
+  }
 `;
 
 export const container = css`

@@ -1,4 +1,8 @@
 {
+  "contact": {
+    "whatsappLink": "https://walink.co/19eb06",
+    "telegramLink": "https://t.me/DanielCruz2021"
+  },
   "projects": [
     {
       "imgSrc": "/assets/imgs/projects/react.png",

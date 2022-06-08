@@ -20,9 +20,8 @@ interface MainLayoutProps {
 
 export default function MainLayout({ children }: MainLayoutProps) {
   const router = useRouter();
-  console.log("Re render MainLayout");
-
   const headTitle: string = capitalizePathname(router?.pathname);
+
   return (
     <>
       <Head>

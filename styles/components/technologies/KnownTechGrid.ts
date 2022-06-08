@@ -24,4 +24,10 @@ export const generalStyles = css`
   .tech-bubble:hover {
     animation: 2000ms cubic-bezier(0.75, 0.25, 0.25, 0.75) infinite ani-float-3;
   }
+
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
 `;

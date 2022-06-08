@@ -15,5 +15,9 @@ export const utilityClasses = css.global`
     box-shadow: ${boxShadow.buttons};
   }
 
+  .txt-center {
+    text-align: center;
+  }
+
   // #endregion utility classes
 `;

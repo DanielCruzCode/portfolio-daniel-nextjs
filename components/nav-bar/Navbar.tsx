@@ -1,45 +1,53 @@
+import { injectIntl, IntlShape } from "react-intl";
+
 import {
   ContactIcon,
   KnowledgeIcon,
   ProfileIcon,
   WorkingExpIcon,
 } from "components/icons/nav-bar-icons/NavBarIcons";
-import { memo } from "react";
 import { navBar } from "styles/components/nav-bar/NavBarStyles";
 import BubbleLink from "./BubbleLink";
+import { BubbleLinkMessages } from "messages/BubbleLinkMessages";
+import { BackToTopButton } from "components/layout/main-layout/BackToTopButton";
 
-function NavBar() {
+interface Props {
+  intl: IntlShape;
+}
+
+const NavBar = ({ intl }: Props) => {
   return (
     <>
       <div className="navContainer">
+        <BackToTopButton />
         <nav>
           <ul>
             <li>
               <BubbleLink
                 href="/profile"
                 IconComponent={ProfileIcon}
-                text="Profile"
+                text={intl.formatMessage(BubbleLinkMessages.profileTitle)}
               />
             </li>
             <li>
               <BubbleLink
                 href="/working-experience"
                 IconComponent={KnowledgeIcon}
-                text="Experiencia laboral"
+                text={intl.formatMessage(BubbleLinkMessages.workingXpTitle)}
               />
             </li>
             <li>
               <BubbleLink
                 href="/knowledge"
                 IconComponent={WorkingExpIcon}
-                text={"Conocimientos"}
+                text={intl.formatMessage(BubbleLinkMessages.knowledgeTitle)}
               />
             </li>
             <li>
               <BubbleLink
                 href="/contact"
                 IconComponent={ContactIcon}
-                text="Contact"
+                text={intl.formatMessage(BubbleLinkMessages.contactTitle)}
               />
             </li>
           </ul>
@@ -48,6 +56,6 @@ function NavBar() {
       <style jsx>{navBar}</style>
     </>
   );
-}
+};
 
-export default memo(NavBar);
+export default injectIntl(NavBar);

@@ -77,6 +77,22 @@ export const globalStyles = css.global`
     text-align: start;
   }
 
+  input {
+    border: transparent;
+    border-bottom: 2px solid rgba(131, 131, 131, 0.2);
+    text-align: center;
+    transition: border 200ms ease-in;
+  }
+
+  input::placeholder {
+    color: #dcdcdc;
+  }
+
+  input:focus-visible {
+    outline: none;
+    border-bottom: 2px solid ${colors.primary};
+  }
+
   a:any-link {
     color: ${colors.textsHighlightColor};
   }

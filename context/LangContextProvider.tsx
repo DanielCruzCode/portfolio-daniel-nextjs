@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { createIntl, createIntlCache, IntlProvider } from "react-intl";
+import { IntlProvider } from "react-intl";
 
 import { langContext } from "context/LangContext";
 import {
@@ -20,21 +20,13 @@ export const LangProvider = ({ children }: Props) => {
   const router = useRouter();
   const locale: string = router.locale || MESSAGES_CONFIG_INITIAL_STATE.locale;
   const [messages, setMessages] = useState(MESSAGES_CONFIG_INITIAL_STATE);
-  const cache = createIntlCache();
-  const intl = createIntl(
-    {
-      locale,
-      messages: messages.lang,
-    },
-    cache
-  );
 
   useEffect(() => {
     setMessages(MESSAGES_CONFIG[locale] || MESSAGES_CONFIG_DEFAULT);
   }, [locale]);
 
   return (
-    <langContext.Provider value={{ intl }}>
+    <langContext.Provider value={{}}>
       <IntlProvider messages={messages.lang} locale={messages.locale}>
         {children}
       </IntlProvider>
